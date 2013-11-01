@@ -6,7 +6,7 @@ let g:loaded_phpclassexplorer_plugin = 1
 function! s:findFunctions()
     let currentfile = expand("%")
     if filereadable(currentfile)
-        execute 'lvimgrep /on .*(/ '. currentfile
+        execute 'lvimgrep /function [a-zA-Z0-9]*(/ '. currentfile
     endif
 endfun
 
